@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,13 +13,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        
-        \App\Models\User::Create([
+         //\App\Models\User::factory(1)->create();
+         \App\Models\Category::factory(6)->create();
+         \App\Models\Product::factory(22)->create();
+
+         \App\Models\User::Create([
             'name' => 'Admin',
             'email' => 'admin@admin.com',
-            'password' => bcrypt('#admin'),
-            'utype' => 'ADM'
-
+            'password' => bcrypt('#Bjork3552'),
+            'utype' => 'ADM',
         ]);
     }
 }
