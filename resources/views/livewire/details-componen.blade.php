@@ -220,7 +220,7 @@
                                         </a>
                                     </div>
                                     <div class="product-info">
-                                        <a href="#" class="product-name"><span>{{$p_product->name}}</span></a>
+                                        <a href="{{route('product.details',['slug'=>$p_product->slug])}}" class="product-name"><span>{{$p_product->name}}</span></a>
                                         <div class="wrap-price"><span class="product-price">${{$p_product->regular_price}}</span></div>
                                     </div>
                                 </div>
