@@ -1,3 +1,6 @@
+@push('title')
+    Shop Details
+@endpush
 <main id="main" class="main-site">
 
     <div class="container">

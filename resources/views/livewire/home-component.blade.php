@@ -1,3 +1,6 @@
+@push('title')
+    Home
+@endpush
 <main id="main">
     <div class="container">
 

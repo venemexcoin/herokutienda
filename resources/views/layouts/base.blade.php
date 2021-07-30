@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Desarroyo</title>	
+	<title>@stack('title')</title>	
 	<link rel="shortcut icon" type="image/x-icon" href="{{asset ('assets/images/developer-1.ico')}}">
     <script src="https://kit.fontawesome.com/3226d1ef96.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css.map">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.css" integrity="sha512-40vN6DdyQoxRJCw0klEUwZfTTlcwkOLKpP8K8125hy9iF4fi8gPpWZp60qKC6MYAFaond8yQds7cTMVU8eMbgA==" crossorigin="anonymous" />
 
-	@stack('style')
+	@stack('styles')
 
 	@livewireStyles
 </head>
@@ -85,6 +85,9 @@
 													</li>
 													<li class="menu-item" >
 														<a title="Categories" href="{{route('admin.categories')}}">Categories</a>
+													</li>
+													<li class="menu-item" >
+														<a title="Categories" href="{{route('admin.products')}}">All Products</a>
 													</li>
 													<li class="menu-item" >
 														<a title="Logout" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit(); ">Logout</a>
@@ -503,5 +506,6 @@
 	<script src="{{secure_asset('assets/js/jquery.sticky.js')}}"></script>
 	<script src="{{secure_asset('assets/js/functions.js')}}"></script>
     @livewireScripts
+	@stack('scripts')
 </body>
 </html>

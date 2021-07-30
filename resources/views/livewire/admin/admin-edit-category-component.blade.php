@@ -1,3 +1,6 @@
+@push('title')
+    Edit Category
+@endpush
 <div>
     <style>
         .container {

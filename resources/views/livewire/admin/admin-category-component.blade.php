@@ -1,3 +1,6 @@
+@push('title')
+    Admin Category
+@endpush
 <div>
     <style>
         body {
