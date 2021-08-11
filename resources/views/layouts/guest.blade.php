@@ -34,14 +34,14 @@
     <script src="https://kit.fontawesome.com/3226d1ef96.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="{{secure_asset('assets/css/animate.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{secure_asset('assets/css/font-awesome.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{secure_asset('assets/css/bootstrap.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{secure_asset('assets/css/owl.carousel.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{secure_asset('assets/css/flexslider.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{secure_asset('assets/css/chosen.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{secure_asset('assets/css/style.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{secure_asset('assets/css/color-01.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/animate.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/owl.carousel.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/flexslider.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/chosen.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/color-01.css')}}">
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css.map">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.css" integrity="sha512-40vN6DdyQoxRJCw0klEUwZfTTlcwkOLKpP8K8125hy9iF4fi8gPpWZp60qKC6MYAFaond8yQds7cTMVU8eMbgA==" crossorigin="anonymous" />
@@ -542,15 +542,15 @@
 		</div>
 	</footer>
 	
-	<script src="{{secure_asset('assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
-	<script src="{{secure_asset('assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
-	<script src="{{secure_asset('assets/js/bootstrap.min.js')}}"></script>
-	<script src="{{secure_asset('assets/js/jquery.flexslider.js')}}"></script>
-	<script src="{{secure_asset('assets/js/chosen.jquery.min.js')}}"></script>
-	<script src="{{secure_asset('assets/js/owl.carousel.min.js')}}"></script>
-	<script src="{{secure_asset('assets/js/jquery.countdown.min.js')}}"></script>
-	<script src="{{secure_asset('assets/js/jquery.sticky.js')}}"></script>
-	<script src="{{secure_asset('assets/js/functions.js')}}"></script>
+	<script src="{{asset('assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
+	<script src="{{asset('assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
+	<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('assets/js/jquery.flexslider.js')}}"></script>
+	<script src="{{asset('assets/js/chosen.jquery.min.js')}}"></script>
+	<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
+	<script src="{{asset('assets/js/jquery.countdown.min.js')}}"></script>
+	<script src="{{asset('assets/js/jquery.sticky.js')}}"></script>
+	<script src="{{asset('assets/js/functions.js')}}"></script>
     @livewireScripts
 </body>
 </html>

@@ -19,6 +19,7 @@ class CreateHomeSlidersTable extends Migration
             $table->string('subtitle');
             $table->string('price');
             $table->string('link');
+            $table->string('image');
             $table->boolean('status');
             $table->timestamps();
         });

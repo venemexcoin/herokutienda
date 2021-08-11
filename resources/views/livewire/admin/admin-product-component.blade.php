@@ -73,6 +73,9 @@
                         </div>
                     </div>
                     <div class="panel-body">
+                        @if(Session::has('messages'))
+                        <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
+                        @endif
                         <table class="table table-striped">
                             <thead>
                                 <tr>
