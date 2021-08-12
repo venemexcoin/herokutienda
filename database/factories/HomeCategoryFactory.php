@@ -22,7 +22,8 @@ class HomeCategoryFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'sel_categories'=> $this->faker->numberBetween(1,5),
+            'no_of_products'=> $this->faker->numberBetween(1,5),
         ];
     }
 }
