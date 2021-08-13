@@ -97,7 +97,10 @@
 														<a title="Manage Home Categories" href="{{route('admin.homecategories')}}">Manage Home Category</a>
 													</li>
 													<li class="menu-item">
-														<a title="All Orders" href="{{route('admin.homelogo')}}">Home Logo</a>
+														<a title="Sale setting" href="{{route('admin.sale')}}">Sale setting</a>
+													</li>
+													<li class="menu-item">
+														<a title="Home Logo" href="{{route('admin.homelogo')}}">Home Logo</a>
 													</li>
 													<li class="menu-item" >
 														<a title="Logout" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit(); ">Logout</a>

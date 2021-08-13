@@ -25,6 +25,7 @@ use App\Http\Livewire\Admin\AdminEditHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminHomeCategoryComponent;
 use App\Http\Livewire\Admin\AdminLogoComponent;
 use App\Http\Livewire\Admin\AdminAddLogoComponent;
+use App\Http\Livewire\Admin\AdminSaleComponent;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -74,4 +75,5 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function() {
     Route::get('/admin/home-categories',AdminHomeCategoryComponent::class)->name('admin.homecategories');
     Route::get('/admin/home-logo',AdminLogoComponent::class)->name('admin.homelogo');
     Route::get('/admin/logo/add', AdminAddLogoComponent::class)->name('admin.addlogo');
+    Route::get('/admin/sale',AdminSaleComponent::class)->name('admin.sale');
 });
