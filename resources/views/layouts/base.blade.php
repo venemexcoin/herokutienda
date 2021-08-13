@@ -95,6 +95,9 @@
 													<li class="menu-item" >
 														<a title="Manage Home Categories" href="{{route('admin.homecategories')}}">Manage Home Category</a>
 													</li>
+													<li class="menu-item">
+														<a title="All Orders" href="{{route('admin.homelogo')}}">Home Logo</a>
+													</li>
 													<li class="menu-item" >
 														<a title="Logout" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit(); ">Logout</a>
 													</li>
@@ -134,9 +137,7 @@
 				<div class="container">
 					<div class="mid-section main-info-area">
 
-						<div class="wrap-logo-top left-section">
-							<a href="/" class="link-to-home"><img src="{{asset('assets/images/Logo/logo1.png')}}" alt="mercado"></a>
-						</div>
+						@livewire('logo-component')	
 
 						@livewire('header-search-component')
 

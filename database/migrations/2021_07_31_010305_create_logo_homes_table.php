@@ -15,10 +15,9 @@ class CreateLogoHomesTable extends Migration
     {
         Schema::create('logo_homes', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('description');
+            $table->string('name');
             $table->string('link');
-            $table->string('logo');
+            $table->string('image');
             $table->timestamps();
         });
     }
