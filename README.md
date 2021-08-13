@@ -62,3 +62,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## correccion de Auth video 44
+
+## Este script viene de select2.org es para formatear multiples selectores
+
+## Agreamos una libreri para el tiempo de promociones https://cdnjs.com/libraries/bootstrap-datetimepicker
+
+## usamos https://cdnjs.com/libraries/moment.js como complemento de la anterior
+
+## agregamos otra base de datos para las promociones
