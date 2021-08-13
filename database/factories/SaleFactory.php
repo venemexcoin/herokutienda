@@ -22,7 +22,8 @@ class SaleFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'sale_date' => $this->faker->dateTimeAD($max = 'now', $timezone = null),
+            'status'     => $this->faker->numberBetween(0,1)
         ];
     }
 }
