@@ -52,7 +52,7 @@
                 <div class="product product-style-2 equal-elem ">
                     <div class="product-thumnail">
                         <a href="{{route('product.details',['slug'=>$sproduct->slug])}}" title="{{$sproduct->name}}">
-                            <figure><img src="{{asset('secure_assets/images/products')}}/{{$sproduct->image}}" width="800" height="800" alt=""></figure>
+                            <figure><img src="{{secure_asset('assets/images/products')}}/{{$sproduct->image}}" width="800" height="800" alt=""></figure>
                         </a>
                         <div class="group-flash">
                             <span class="flash-item sale-label">Oferta</span>
