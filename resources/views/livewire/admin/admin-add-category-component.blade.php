@@ -16,7 +16,8 @@
             }
         }
     </style>
-    <div class="container">
+   <div>
+    <div class="container" style="padding: 30px 0;">
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
@@ -30,39 +31,39 @@
                             </div>
                         </div>
                     </div>
-                        <div class="panel-body">
-
-                            @if(Session::has('success_message'))
-                        <div class="alert alert-success">
-                                <strong>Success</strong> {{Session::get('success_message')}}
-                            </div>
+                    <div class="panel-body">
+                        @if(Session::has('message'))
+                            <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
                         @endif
-
-                            <form class="form-horizontal" wire:submit.prevent="storeCategory" >
-                                <div class="form-group">
-                                    <label class="col-md-4 control-lavel">Category Name</label>
-                                    <div class="col-md-4">
-                                        <input type="text" placeholder="Category Name" class="form-control input-md" wire:model="name" wire:keyup="generateslug"/>
-                                    </div>
+                        <form class="form-horizontal" wire:submit.prevent="storeCategory">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Category Name</label>
+                                <div class="col-md-4">
+                                    <input type="text" placeholder="Category Name" class="form-control input-md" wire:model='name' wire:keyup="generateslug" />
+                                    @error('name') <p class="text-danger">{{$message}}</p> @enderror
                                 </div>
+                            </div>
 
-                                <div class="form-group">
-                                    <label class="col-md-4 control-lavel">Category Slug</label>
-                                    <div class="col-md-4">
-                                        <input type="text" placeholder="Category Name" class="form-control input-md" wire:model="slug" />
-                                    </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Category slug</label>
+                                <div class="col-md-4">
+                                    <input type="text" placeholder="Category Slug" class="form-control input-md" wire:model='slug' />
+                                    @error('slug') <p class="text-danger">{{$message}}</p> @enderror
                                 </div>
+                            </div>
 
-                                <div class="form-group">
-                                    <label class="col-md-4 control-lavel"></label>
-                                    <div class="col-md-4">
-                                        <button type="submit" class="btn btn-success">Submit</button>
-                                    </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label"></label>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
