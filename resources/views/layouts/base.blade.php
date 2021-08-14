@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>@stack('title')</title>	
 	<link rel="shortcut icon" type="image/x-icon" href="{{asset ('assets/images/developer-1.ico')}}">
@@ -27,6 +28,8 @@
 
 	@livewireStyles
 </head>
+
+
 <body class="home-page home-01 ">
 
 	<!-- mobile menu -->

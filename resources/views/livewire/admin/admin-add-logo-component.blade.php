@@ -39,7 +39,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label">Image</label>
                             <div class="col-md-4">
-                                <input type="file" class="input-file" wire:model="image"/>
+                                <input type="file" class="input-file" accept="image/*" wire:model="image"/>
                                 @if($image)
                                     <img src="{{$image->temporaryUrl()}}" alt="120">
                                 @endif
