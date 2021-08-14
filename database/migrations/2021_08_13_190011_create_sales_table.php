@@ -16,7 +16,7 @@ class CreateSalesTable extends Migration
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
             $table->dateTime('sale_date');
-            $table->string('status');
+            $table->string('status'); //pendiente colocarlo a 1 caracter
             $table->timestamps();
         });
     }

@@ -70,3 +70,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## usamos https://cdnjs.com/libraries/moment.js como complemento de la anterior
 
 ## agregamos otra base de datos para las promociones
+
+## instalamos libreria nouislider para el efecto de selector de maximo y minimo de precio, desde https://cdnjs.com/libraries/noUiSlider
