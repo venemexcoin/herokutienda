@@ -2,6 +2,7 @@
     Shop
 @endpush
 <main id="main" class="main-site left-sidebar">
+   
 
     <div class="container">
 
@@ -60,25 +61,34 @@
                 <div class="row">
 
                     <ul class="product-list grid-products equal-container">
+                        @php
+                            $witems = Cart::instance('wishlist')->content()->pluck('id');
+                        @endphp
+                        @foreach ($products as $product)
 
-                        @foreach($products as $product)
+							<li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
+								<div class="product product-style-3 equal-elem ">
+									<div class="product-thumnail">
+										<a href="{{route('product.details',['slug'=>$product->slug])}}" title="{{$product->regular_price}}">
+											<figure><img src="{{asset('assets/images/products')}}/{{$product->image}}" class="imageShow"  alt="{{$product->regular_price}}"></figure>
+										</a>
+									</div>
+									<div class="product-info">
+										<a href="{{route('product.details',['slug'=>$product->slug])}}" class="product-name"><span>{{$product->name}}</span></a>
+										<div class="wrap-price"><span class="product-price">{{$product->regular_price}}</span></div>
+										<a href="#" class="btn add-to-cart" wire:click.prevent="store({{ $product->id }},'{{$product->name}}',{{$product->regular_price }})" >Add To Cart</a>
+										<div class="product-wish">
+											@if($witems->contains($product->id))
+												<a href="#" wire:click.prevent="removeFromWishlist({{$product->id}})"><i class="fa fa-heart fill-heart"></i></a>
+											@else 
+											<a href="#" wire:click.prevent="addToWishlist({{ $product->id }},'{{$product->name}}',{{$product->regular_price }})" ><i class="fa fa-heart"></i></a>
+											@endif
+										</div>
+									</div>
+								</div>
+							</li>
 
-                        <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
-                            <div class="product product-style-3 equal-elem ">
-                                <div class="product-thumnail">
-                                    <a href="{{route('product.details',['slug'=>$product->slug])}}" title="{{$product->name}}">
-                                        <figure><img src="{{asset('assets/images/products')}}/{{$product->image}}" alt="{{$product->name}}"></figure>
-                                    </a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="{{route('product.details',['slug'=>$product->slug])}}" class="product-name"><span>{{$product->name}}</span></a>
-                                    
-                                    <div class="wrap-price"><span class="product-price">{{$product->regular_price}}</span></div>
-                                    <a href="#" class="btn add-to-cart" wire:click.prevent="store({{ $product->id }},'{{$product->name}}',{{$product->regular_price }})">Add To Cart</a>
-                                </div>
-                            </div>
-                        </li>
-                        @endforeach
+							@endforeach
 
                     </ul>
                 </div>
@@ -100,10 +110,10 @@
                     <h2 class="widget-title">All Categories</h2>
                     <div class="widget-content">
                         <ul class="list-category">
-                            @foreach($categories as $category)
-                            <li class="category-item">
-                                <a href="{{route('product.category',['category_slug' => $category->slug ])}}" class="cate-link">{{$category->name}}</a>
-                            </li>
+                            @foreach ($categories as $category)
+                                <li class="category-item">
+                                <a href="{{route('product.category',['category_slug'=>$category->slug])}}" class="cate-link">{{$category->name}}</a>
+                                </li>   
                             @endforeach
                         </ul>
                     </div>
@@ -129,15 +139,13 @@
                 </div><!-- brand widget-->
 
                 <div class="widget mercado-widget filter-widget price-filter">
-                    <h2 class="widget-title">Precio entre <span class="text-info">${{$min_price}} - ${{$max_price}}</span></h2>
+                    <h2 class="widget-title">Price <span class="text-info">${{$min_price}} - ${{$max_price}}</span></h2>
                     <div class="widget-content">
-                        
-                        <div id="slider" wire:ignore ></div>
-
+                        <div id="slider" wire:ignore></div>
                     </div>
                 </div><!-- Price-->
 
-                <div class="widget mercado-widget filter-widget">
+                <div class="widget mercado-widget filter-widget color">
                     <h2 class="widget-title">Color</h2>
                     <div class="widget-content">
                         <ul class="list-style vertical-list has-count-index">
