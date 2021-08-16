@@ -53,7 +53,7 @@
                                 @if($newimage)
                                 <img src="{{$newimage->temporaryUrl()}}" width="120">
                                 @else 
-                                    <img src="{{asset('assets/images/sliders')}}/{{$image}}" width="120">
+                                    <img src="{{secure_asset('assets/images/sliders')}}/{{$image}}" width="120">
                                 @endif
                             </div>
                         </div>

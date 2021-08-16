@@ -91,7 +91,7 @@
                                     <td>{{$logo->id}}</td>
                                     <td>{{$logo->name}}</td>
                                     <td>{{$logo->link}}</td>
-                                    <td><img src="{{asset('assets/images/Logo')}}/{{$logo->image}}" width="120"></td>
+                                    <td><img src="{{secure_asset('assets/images/Logo')}}/{{$logo->image}}" width="120"></td>
                                 </tr>
                             @endforeach
                         </tbody>

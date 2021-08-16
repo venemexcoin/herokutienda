@@ -94,7 +94,7 @@
                                 @foreach ($products as $product)
                                     <tr>
                                         <td data-title="Id">{{$product->id}}</td>
-                                        <td data-title="Img product"><img src="{{asset('assets/images/products')}}/{{$product->image}}" width="60"></td>
+                                        <td data-title="Img product"><img src="{{secure_asset('assets/images/products')}}/{{$product->image}}" width="60"></td>
                                         <td data-title="Name">{{$product->name}}</td>
                                         <td data-title="Status">{{$product->stock_status}}</td>
                                         <td data-title="Price">{{$product->regular_price}}</td>
