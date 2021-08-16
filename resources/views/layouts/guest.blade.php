@@ -103,7 +103,7 @@
 										@auth 
 											@if(Auth::user()->utype === 'ADM')
 											<li class="menu-item menu-item-has-children parent" >
-												<a title="My Accoun" href="#">My Accoun ({{secure_Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+												<a title="My Accoun" href="#">My Accoun ({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 												<ul class="submenu curency" >
 													<li class="menu-item" >
 														<a title="Dashboard" href="{{route('admin.dashboard')}}">Dashboard</a>
@@ -119,7 +119,7 @@
 											</li> 
 											@else  
 											<li class="menu-item menu-item-has-children parent" >
-												<a title="My Accoun" href="#">My Accoun ({{secure_Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+												<a title="My Accoun" href="#">My Accoun ({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 												<ul class="submenu curency" >
 													<li class="menu-item" >
 														<a title="Dashboard" href="{{route('user.dashboard')}}">Dashboard</a>

@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>@stack('title')</title>	
 	<link rel="shortcut icon" type="image/x-icon" href="{{secure_asset ('assets/images/developer-1.ico')}}">
+
     <script src="https://kit.fontawesome.com/3226d1ef96.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
@@ -83,7 +84,7 @@
 										@auth 
 											@if(Auth::user()->utype === 'ADM')
 											<li class="menu-item menu-item-has-children parent" >
-												<a title="My Accoun" href="#">My Accoun ({{secure_Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+												<a title="My Accoun" href="#">My Accoun ({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 												<ul class="submenu curency" >
 													<li class="menu-item" >
 														<a title="Dashboard" href="{{route('admin.dashboard')}}">Dashboard</a>
@@ -117,7 +118,7 @@
 											</li> 
 											@else  
 											<li class="menu-item menu-item-has-children parent" >
-												<a title="My Accoun" href="#">My Accoun ({{secure_Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+												<a title="My Accoun" href="#">My Accoun ({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 												<ul class="submenu curency" >
 													<li class="menu-item" >
 														<a title="Dashboard" href="{{route('user.dashboard')}}">Dashboard</a>
