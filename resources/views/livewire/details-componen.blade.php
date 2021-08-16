@@ -28,8 +28,8 @@
                         <div class="product-gallery">
                           <ul class="slides">
 
-                            <li data-thumb="{{asset('assets/images/products')}}/{{$product->image}}">
-                                <img src="{{ asset('assets/images/products')}}/{{$product->image}}" alt="{{$product->name}}" />
+                            <li data-thumb="{{secure_asset('assets/images/products')}}/{{$product->image}}">
+                                <img src="{{secure_asset('assets/images/products')}}/{{$product->image}}" alt="{{$product->name}}" />
                             </li>
 
                           </ul>
@@ -49,7 +49,7 @@
                             {{$product->short_description}}
                         </div>
                         <div class="wrap-social">
-                            <a class="link-socail" href="#"><img src="{{ asset('assets/images/social-list.png')}}" alt=""></a>
+                            <a class="link-socail" href="#"><img src="{{secure_asset('assets/images/social-list.png')}}" alt=""></a>
                         </div>
                         @if($product->sale_price > 0 && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now() )
                         <div class="wrap-price">
@@ -117,7 +117,7 @@
                                         <ol class="commentlist">
                                             <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-20">
                                                 <div id="comment-20" class="comment_container"> 
-                                                    <img alt="" src="{{ asset('assets/images/author-avata.jpg')}}" height="80" width="80">
+                                                    <img alt="" src="{{secure_asset('assets/images/author-avata.jpg')}}" height="80" width="80">
                                                     <div class="comment-text">
                                                         <div class="star-rating">
                                                             <span class="width-80-percent">Rated <strong class="rating">5</strong> out of 5</span>
@@ -239,7 +239,7 @@
                                 <div class="product product-widget-style">
                                     <div class="thumbnnail">
                                         <a href="{{route('product.details',['slug'=>$p_product->slug])}}" title="{{$p_product->name}}">
-                                            <figure><img src="{{ asset('assets/images/products')}}/{{$p_product->image}}" alt="{{$p_product->name}}"></figure>
+                                            <figure><img src="{{secure_asset('assets/images/products')}}/{{$p_product->image}}" alt="{{$p_product->name}}"></figure>
                                         </a>
                                     </div>
                                     <div class="product-info">
